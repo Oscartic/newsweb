@@ -1,0 +1,17 @@
+= form_with(model: notice, local: true) do |form|
+  - if notice.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(notice.errors.count, "error")
+        prohibited this notice from being saved:
+      %ul
+        - notice.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :title
+    = form.text_field :title
+  .field
+    = form.label :body
+    = form.text_area :body
+  .actions
+    = form.submit
