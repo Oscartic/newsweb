@@ -6,5 +6,8 @@
   %strong Body:
   = @notice.body
 = link_to 'Edit', edit_notice_path(@notice)
-|
+
+= render 'comments/form'
+= render @notice.comments
+
 = link_to 'Back', notices_path

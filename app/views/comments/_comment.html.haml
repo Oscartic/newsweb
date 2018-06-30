@@ -1,0 +1,5 @@
+%div
+  = comment.title
+  = comment.body
+  = comment.created_at.strftime("%d-%m-%Y")
+  = link_to "Eliminar", [comment.notice, comment], :method => :delete, data: {confirm: "¿Seguro desea eliminar su comentario?"}
