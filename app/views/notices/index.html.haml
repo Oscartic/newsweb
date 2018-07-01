@@ -1,14 +1,10 @@
 %p#notice= notice
-%h1 Notices
+%h1 Últimas Noticias
 - @notices.each do |notice|
   .list-group
 
     %h2= link_to notice.title, notice
-    %p= notice.body.truncate_words(20)
-    .action-notice
-      = link_to 'Show', notice
-      = link_to 'Edit', edit_notice_path(notice)
-      = link_to 'Destroy', notice, method: :delete, data: { confirm: 'Are you sure?' }
+    %p= notice.body.truncate_words(60)
   %hr
 %br/
 = link_to 'Crear noticia', new_notice_path, class: 'btn btn-secondary'

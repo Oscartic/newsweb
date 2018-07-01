@@ -3,7 +3,7 @@
     #error_explanation
       %h2
         = pluralize(notice.errors.count, "error")
-        prohibited this notice from being saved:
+        *No se puede guardar su noticia:
       %ul
         - @notice.errors.full_messages.each do |message|
           %li= message

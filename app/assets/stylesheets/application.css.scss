@@ -25,7 +25,7 @@ body {
 
 h1 {
   font-weight: 600;
-  color: #7343bb;
+  color: #3e8cd4;
 }
 
 a {
@@ -37,18 +37,25 @@ a {
 #comments {
   h3 {
     font-weight: 200;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #50507f;
   }
   p {
     font-size: 0.8rem;
+    font-weight: 300;
     color: #7d7d7d;
   }
 }
 .action-notice {
+  overflow: hidden;
   a {
     text-align: right;
     display: inline-block;
     border-right: 1px solid #adadad;
-    padding-right: 0.3em;
-    font-size: .8rem;
+    padding: 0 0.4em;
+    font-size: .9rem;
+    float: right;
+    font-weight: 600;
   }
 }

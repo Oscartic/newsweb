@@ -1,4 +1,4 @@
-= form_for([@notice, @notice.comments.build]) do |f|
+= form_for([@notice, @notice.comments.build], remote: true) do |f|
 
   .form-group
     = f.label 'Comentario'

@@ -3,13 +3,21 @@
 %p= @notice.body
 
 -if user_signed_in?
-  = link_to 'Editar', edit_notice_path(@notice)
-  = link_to 'Eliminar', @notice, method: :delete, data: {confirm: "¿Seguro que desa eliminar el articulo?"}
+  -if current_user.id == @notice.user_id
+    .action-notice
+      = link_to 'Destroy', notice, method: :delete, data: { confirm: 'Are you sure?' }
+      = link_to 'Edit', edit_notice_path(@notice)
 
-= render 'comments/form'
-#comments
-  -@notice.comments.each do |comment|
-    %h3= comment.notice.user.email
-    %p= comment.body
-  %hr
+%hr
+-if user_signed_in?
+  %h5 Deje su comentario:
+  = render 'comments/form'
+-else
+  .alert.alert-info
+    Registrate para comentar esta noticia.
+%hr
+#comments.mt-2
+  %p #{@notice.comments.count} Comentarios
+  =render @notice.comments
+
 = link_to 'Todas las noticias', notices_path, class: 'btn btn-secondary'
