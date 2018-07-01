@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f23bbca-8e0f-411b-a5da-e564065d7ba7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/comments/_comment.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/notices/show.js.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comments/_form.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/comments/_form.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_menu.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/notices/_form.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/_form.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/notices/index.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/index.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/notices/show.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/show.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -37,11 +24,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_menu.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_menu.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.html.haml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -60,7 +65,6 @@
         <option value="$PROJECT_DIR$/app/views/notices/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/notices/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/notice.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -85,6 +89,8 @@
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_menu.html.haml" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -100,10 +106,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="117" />
-    <option name="y" value="23" />
+    <option name="x" value="1282" />
     <option name="width" value="1278" />
-    <option name="height" value="977" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -355,15 +360,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530384061958</updated>
-      <workItem from="1530384063160" duration="31955000" />
+      <workItem from="1530384063160" duration="32960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31955000" />
+    <option name="totallyTimeSpent" value="32960000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1278" height="1080" extended-state="0" />
+    <frame x="1282" y="0" width="1278" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -421,13 +426,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notices/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -618,6 +616,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
         </state>
       </provider>
     </entry>
