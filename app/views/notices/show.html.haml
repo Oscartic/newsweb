@@ -1,13 +1,15 @@
-%p#notice= notice
-%p
-  %strong Title:
-  = @notice.title
-%p
-  %strong Body:
-  = @notice.body
-= link_to 'Edit', edit_notice_path(@notice)
+
+%h1= @notice.title
+%p= @notice.body
+
+-if user_signed_in?
+  = link_to 'Editar', edit_notice_path(@notice)
+  = link_to 'Eliminar', @notice, method: :delete, data: {confirm: "¿Seguro que desa eliminar el articulo?"}
 
 = render 'comments/form'
-= render @notice.comments
-
-= link_to 'Back', notices_path
+#comments
+  -@notice.comments.each do |comment|
+    %h3= comment.notice.user.email
+    %p= comment.body
+  %hr
+= link_to 'Todas las noticias', notices_path, class: 'btn btn-secondary'

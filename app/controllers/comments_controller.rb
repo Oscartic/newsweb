@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :set_notice, only: [:create, :destroy]
 
   def create
-    @comment = @notice.comments.new(comment_params)
+    @comment = @notice.comments.create(comment_params)
     redirect_to @notice
   end
 

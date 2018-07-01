@@ -1,18 +1,14 @@
 %p#notice= notice
 %h1 Notices
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th{:colspan => "3"}
-  %tbody
-    - @notices.each do |notice|
-      %tr
-        %td= notice.title
-        %td= notice.body.truncate_words(20)
-        %td= link_to 'Show', notice
-        %td= link_to 'Edit', edit_notice_path(notice)
-        %td= link_to 'Destroy', notice, method: :delete, data: { confirm: 'Are you sure?' }
+- @notices.each do |notice|
+  .list-group
+
+    %h2= link_to notice.title, notice
+    %p= notice.body.truncate_words(20)
+    .action-notice
+      = link_to 'Show', notice
+      = link_to 'Edit', edit_notice_path(notice)
+      = link_to 'Destroy', notice, method: :delete, data: { confirm: 'Are you sure?' }
+  %hr
 %br/
-= link_to 'New Notice', new_notice_path
+= link_to 'Crear noticia', new_notice_path, class: 'btn btn-secondary'

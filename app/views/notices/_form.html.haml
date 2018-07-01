@@ -1,20 +1,21 @@
 = form_with(model: notice, local: true) do |form|
-  - if notice.errors.any?
+  - if @notice.errors.any?
     #error_explanation
       %h2
         = pluralize(notice.errors.count, "error")
         prohibited this notice from being saved:
       %ul
-        - notice.errors.full_messages.each do |message|
+        - @notice.errors.full_messages.each do |message|
           %li= message
-  .field
-    = form.label :title
-    = form.text_field :title
-  .field
-    = form.label :body
-    = form.text_area :body
-  .field
-    = form.label :user_id
-    = form.text_area :user_id
+  .form-group
+    = form.label 'Titulo'
+    = form.text_field :title, class: 'form-control'
+  .form-group
+    = form.label 'Noticia'
+    = form.text_area :body, class: 'form-control', :rows => 8
   .actions
-    = form.submit
+    -if @notice.new_record?
+      = form.submit 'Crear noticia', class: 'btn btn-secondary'
+    -else
+      = form.submit 'Actualizar noticia', class: 'btn btn-secondary'
+    = link_to 'Cancelar', notices_path, class: 'btn btn-info'

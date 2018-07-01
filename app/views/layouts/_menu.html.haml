@@ -1,0 +1,18 @@
+.container-fluid#menu-top
+  .row
+    .col
+      %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        = link_to 'NewsWeb', notices_path, class: 'navbar-brand'
+        %ul.navbar-nav.ml-auto
+          %li.nav-item
+            = link_to 'Crear Noticia', new_notice_path, class: 'nav-link'
+          %li.nav-item
+            %a.nav-link{:href => "#"} Link
+          %li.nav-item.dropdown
+            -if user_signed_in?
+              %a.nav-link.dropdown-toggle{'data-toggle' => 'dropdown', 'aria-haspopup' => 'true', 'aria-expanded' => 'false'} #{current_user.email.to_s}
+              .dropdown-menu
+                =link_to "Editar cuenta",  edit_user_registration_path(current_user.id), class: "dropdown-item"
+                = link_to "cerrar sesión",  destroy_user_session_path, method: :delete, class: "dropdown-item"
+            - else
+              =link_to("Iniciar sesion", new_user_session_path, class: "nav-link dropdown-toggle")

@@ -1,4 +1,6 @@
 class NoticesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :set_notice, only: [:show, :edit, :update, :destroy]
 
   # GET /notices
@@ -14,7 +16,7 @@ class NoticesController < ApplicationController
 
   # GET /notices/new
   def new
-    @notice = Notice.new
+    @notice = current_user.notices.build
   end
 
   # GET /notices/1/edit
@@ -24,7 +26,7 @@ class NoticesController < ApplicationController
   # POST /notices
   # POST /notices.json
   def create
-    @notice = Notice.new(notice_params)
+    @notice = current_user.notices.build(notice_params)
 
     respond_to do |format|
       if @notice.save
@@ -70,5 +72,10 @@ class NoticesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def notice_params
       params.require(:notice).permit(:title, :body)
+    end
+
+    def correct_user
+      @notice = current_user.notices.find_by(id: params[:id])
+      redirect_to notices_path, notice: "No esta autorizado para editar este articulo" if @notice.nil?
     end
 end

@@ -41,6 +41,8 @@ gem 'hamlit-rails'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
